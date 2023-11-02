@@ -1,13 +1,13 @@
 {
-  "name": "fullstack-template",
+  "name": "keepfit",
   "version": "1.0.0",
-  "description": "Starter template for future projects",
+  "description": "exercise log and exercise library app",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Joseph Keepers",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.1",
