@@ -1,0 +1,18 @@
+#pageColors{
+    background-color:black;
+    color: white;
+}
+#exerciseWidth{
+    width: 100%;
+}
+#buttonColor{
+    background-color: white;
+    color: black;
+}
+#listStyle{
+    list-style-type: none;
+}
+#keepFit{
+    font-size: 2em;   
+}
+

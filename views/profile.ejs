@@ -1,0 +1,170 @@
+<%- include('partials/header') -%>
+<div class="container">
+    <div class="row justify-content-center mt-5">
+      <a class="btn btn-primary" id="buttonColor" href="/exercise">Exercise Library</a>
+      <div>
+        <p><strong>User Name</strong>: <%= user.userName %></p>
+        <p><strong>Email</strong>: <%= user.email %></p>
+        <a href="/logout" id="buttonColor" class="col-3 btn btn-primary">Logout</a>
+      </div>
+    </div>
+    <div class="mt-5">
+      <h2>Log a workout</h2>
+      <form action="/workout/createWorkout" method="POST">
+        <div class="mb-3">
+            <label for="workout" class="form-label">Add <strong>Stretches</strong>:Sets/Reps or Time</label>
+            <input type="text" class="form-control" id="workout" name="workout">
+            <input type="text" class="form-control" id="workoutA" name="workoutA">
+            <input type="text" class="form-control" id="workoutB" name="workoutB">
+            <input type="text" class="form-control" id="workoutC" name="workoutC">
+            <input type="text" class="form-control" id="workoutD" name="workoutD">
+            <input type="text" class="form-control" id="workoutE" name="workoutE">
+            <input type="text" class="form-control" id="workoutF" name="workoutF">
+            <input type="text" class="form-control" id="workoutG" name="workoutG">
+            <input type="text" class="form-control" id="workoutH" name="workoutH">
+            <input type="text" class="form-control" id="workoutI" name="workoutI">
+            <input type="text" class="form-control" id="workoutJ" name="workoutJ">
+            <input type="text" class="form-control" id="workoutK" name="workoutK">
+            <input type="text" class="form-control" id="workoutL" name="workoutL">
+            <input type="text" class="form-control" id="workoutM" name="workoutM">
+            <input type="text" class="form-control" id="workoutN" name="workoutN">
+            <label for="workout" class="form-label">Add <strong>Core</strong>:Sets/Reps or Time</label>
+            <input type="text" class="form-control" id="workoutO" name="workoutO">
+            <input type="text" class="form-control" id="workoutP" name="workoutP">
+            <input type="text" class="form-control" id="workoutQ" name="workoutQ">
+            <input type="text" class="form-control" id="workoutR" name="workoutR">
+            <input type="text" class="form-control" id="workoutS" name="workoutS">
+            <input type="text" class="form-control" id="workoutT" name="workoutT">
+            <input type="text" class="form-control" id="workoutU" name="workoutU">
+            <input type="text" class="form-control" id="workoutV" name="workoutV">
+            <input type="text" class="form-control" id="workoutW" name="workoutW">
+            <input type="text" class="form-control" id="workoutX" name="workoutX">
+            <input type="text" class="form-control" id="workoutY" name="workoutY">
+            <input type="text" class="form-control" id="workoutZ" name="workoutZ">
+            <input type="text" class="form-control" id="workout_A" name="workout_A">
+            <input type="text" class="form-control" id="workout_B" name="workout_B">
+            <input type="text" class="form-control" id="workout_C" name="workout_C">
+            <input type="text" class="form-control" id="workout_D" name="workout_D">
+            <input type="text" class="form-control" id="workout_E" name="workout_E">
+            <label for="workout" class="form-label">Add <strong>Upper Body</strong>:Sets/Reps or Time/Weight</label>
+            <input type="text" class="form-control" id="workout_F" name="workout_F">
+            <input type="text" class="form-control" id="workout_G" name="workout_G">
+            <input type="text" class="form-control" id="workout_H" name="workout_H">
+            <input type="text" class="form-control" id="workout_I" name="workout_I">
+            <label for="workout" class="form-label">Add <strong>Lower Body</strong>:Sets/Reps or Time/Weight</label>
+            <input type="text" class="form-control" id="workout_J" name="workout_J">
+            <input type="text" class="form-control" id="workout_K" name="workout_K">
+            <input type="text" class="form-control" id="workout_L" name="workout_L">
+            <input type="text" class="form-control" id="workout_M" name="workout_M">
+            <input type="text" class="form-control" id="workout_N" name="workout_N">
+            <input type="text" class="form-control" id="workout_O" name="workout_O">
+            <input type="text" class="form-control" id="workout_P" name="workout_P">
+            <input type="text" class="form-control" id="workout_Q" name="workout_Q">
+            <label for="workout" class="form-label">Add <strong>Drills</strong>:Sets/Reps or Time/Weight</label>
+            <input type="text" class="form-control" id="workout_R" name="workout_R">
+            <input type="text" class="form-control" id="workout_S" name="workout_S">
+            <input type="text" class="form-control" id="workout_T" name="workout_T">
+            <input type="text" class="form-control" id="workout_U" name="workout_U">
+            <input type="text" class="form-control" id="workout_V" name="workout_V">
+            <input type="text" class="form-control" id="workout_W" name="workout_W">
+            <input type="text" class="form-control" id="workout_X" name="workout_X">
+        </div>
+        <div class="mb-3">
+          <label for="notes" class="form-label">Add <strong>Notes</strong></label>
+          <textarea class="form-control" id="notes" name="notes"></textarea>
+        </div>
+        <button type="submit" id="buttonColor" class="btn btn-primary">Submit</button>
+      </form>
+      <div class="row justify-content-center mt-5">
+        <ul id ="listStyle">   
+          <% for(var i=0; i<workouts.length; i++) {%>
+            <li>
+              <h2><%= workouts[i].createdAt%></h2>
+              <h4>Stretches</h4>
+              <ul id ="listStyle">
+                <li><%= workouts[i].workout%></li>
+                <li><%= workouts[i].workoutA%></li>
+                <li><%= workouts[i].workoutB%></li>
+                <li><%= workouts[i].workoutC%></li>
+                <li><%= workouts[i].workoutD%></li>
+                <li><%= workouts[i].workoutE%></li>
+                <li><%= workouts[i].workoutF%></li>
+                <li><%= workouts[i].workoutG%></li>
+                <li><%= workouts[i].workoutH%></li>
+                <li><%= workouts[i].workoutI%></li>
+                <li><%= workouts[i].workoutJ%></li>
+                <li><%= workouts[i].workoutK%></li>
+                <li><%= workouts[i].workoutL%></li>
+                <li><%= workouts[i].workoutM%></li>
+                <li><%= workouts[i].workoutN%></li>
+              </ul>
+              <h4>Core</h4>
+              <ul id ="listStyle">
+                <li><%= workouts[i].workoutO%></li>
+                <li><%= workouts[i].workoutP%></li>
+                <li><%= workouts[i].workoutQ%></li>
+                <li><%= workouts[i].workoutR%></li>
+                <li><%= workouts[i].workoutS%></li>
+                <li><%= workouts[i].workoutT%></li>
+                <li><%= workouts[i].workoutU%></li>
+                <li><%= workouts[i].workoutV%></li>
+                <li><%= workouts[i].workoutW%></li>
+                <li><%= workouts[i].workoutX%></li>
+                <li><%= workouts[i].workoutY%></li>
+                <li><%= workouts[i].workoutZ%></li>
+                <li><%= workouts[i].workout_A%></li>
+                <li><%= workouts[i].workout_B%></li>
+                <li><%= workouts[i].workout_C%></li>
+                <li><%= workouts[i].workout_D%></li>
+                <li><%= workouts[i].workout_E%></li>
+              </ul>
+              <h4>Upper Body</h4>
+              <ul id ="listStyle">
+                <li><%= workouts[i].workout_F%></li>
+                <li><%= workouts[i].workout_G%></li>
+                <li><%= workouts[i].workout_H%></li>
+                <li><%= workouts[i].workout_I%></li>
+              </ul>
+              <h4>Lower Body</h4>
+              <ul id ="listStyle">
+                <li><%= workouts[i].workout_J%></li>
+                <li><%= workouts[i].workout_K%></li>
+                <li><%= workouts[i].workout_L%></li>
+                <li><%= workouts[i].workout_M%></li>
+                <li><%= workouts[i].workout_N%></li>
+                <li><%= workouts[i].workout_O%></li>
+                <li><%= workouts[i].workout_P%></li>
+                <li><%= workouts[i].workout_Q%></li>
+              </ul>
+              <h4>Drills</h4>
+              <ul id ="listStyle">
+                <li><%= workouts[i].workout_R%></li>
+                <li><%= workouts[i].workout_S%></li>
+                <li><%= workouts[i].workout_T%></li>
+                <li><%= workouts[i].workout_U%></li>
+                <li><%= workouts[i].workout_V%></li>
+                <li><%= workouts[i].workout_W%></li>
+                <li><%= workouts[i].workout_X%></li>
+              </ul>
+              <h4>Notes</h4>
+              <ul id="listStyle">
+                <li><%= workouts[i].notes%></li>
+              </ul>  
+              <%if(workouts[i].createdById == user.id) {%>
+              <form
+              action="/workout/deleteWorkout/<%= workouts[i]._id %>?_method=DELETE"
+              method="POST"
+              >
+              <button class="btn btn-danger" type="submit">Delete</button>
+              </form>
+              <%}%>
+            </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>    
+    <div class="col-6">
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') -%>
