@@ -3,7 +3,7 @@ A full-stack web application built for my clients at KeepFit LLC. Users can sign
 
 **Link to project:** https://keepfit.onrender.com/
 
-![alt tag](http://placecorgi.com/1200/650)
+![alt tag](https://github.com/1jkeepers3/keepfit/blob/main/public/images/KeepFit.png)
 
 ## How It's Made:
 
